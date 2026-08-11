@@ -11,8 +11,8 @@ public class Main {
         arr.Append(20);
         arr.Append(30);
         arr.Append(40);
+        arr.insert(2,25);
         arr.Append(50);
-        arr.Append(60);
 
         System.out.println(arr.getCount());
 

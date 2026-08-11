@@ -17,9 +17,15 @@ public class Array {
         return count;
     }
 
+    // isFull method
+    boolean isFull() {
+        return (count == items.length);
+    }
+
+
     // Append method
     void Append(int newItem) {
-        if(count == items.length) {
+        if(isFull()) {
             System.out.println("Sorry , You can't add new item");
             return;
         }else {
@@ -34,8 +40,9 @@ public class Array {
     // Traverse method
     void Traverse() {
         for(int i = 0 ; i < items.length ; i++) {
-            System.out.println(items[i]);
+            System.out.print(items[i] + " ");
         }
+        System.out.println();
     }
 
     // Search method
@@ -46,6 +53,18 @@ public class Array {
             }
         }
             return false;
+    }
+
+    // Insert method
+    void insert(int positon , int newItem) {
+        if(isFull()) {
+            System.out.println("Sorry , You can't add new item");
+        }else {
+        for(int i = count ; i > positon ; i--) {
+            items[i] = items[i-1];
+        }
+        items[positon] = newItem;
+        }
     }
 
 }
