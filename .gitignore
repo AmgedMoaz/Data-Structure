@@ -1,2 +1,18 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Build output
+out/
+
+# VS Code
+.vscode/
+
+# Java
+*.class
+
+# C++
 *.exe
+
+# Videos
 *.mp4
