@@ -41,6 +41,14 @@ public class Main {
 
         arr.Traverse();
 
+        int[] other = new int[4];
+        other[0] = 90;
+        other[1] = 100;
+        other[2] = 110;
+
+        arr = arr.Merge(other);
+
+        arr.Traverse();
 
     }
 }

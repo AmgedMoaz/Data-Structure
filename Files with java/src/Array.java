@@ -27,7 +27,6 @@ public class Array {
         return (count == 0);
     }
 
-
     // Append method
     void Append(int newItem) {
         if(isFull()) {
@@ -104,7 +103,6 @@ public class Array {
             for(int i = 0 ; i < count ; i++) {
                 newArray[i] = items[i];
             }
-            newArray.count = this.count;
             return newArray;
         }else {
             return items;
@@ -124,6 +122,35 @@ public class Array {
         }else {
             return this;
         }
+    }
+
+    // Shape 1 Merge method
+    /*
+    int[] Merge(int[] other) {
+        int[] mergedArray = new int[count+other.length];
+        int index = 0;
+        for(int i = 0 ; i < count ; i++,index++) {
+            mergedArray[index] = items[i];
+        }
+        for(int j = 0 ; j < other.length ; j++,index++) {
+            mergedArray[index] = other[j];
+        }
+        return mergedArray;
+    }
+     */
+
+    // Shape 2 Merge method by more OOP
+    Array Merge(int[] other) {
+        Array mergedArray = new Array(count + other.length);
+        int index = 0;
+        for(int i = 0 ; i < count ; i++,index++) {
+            mergedArray.items[index] = this.items[i];
+        }
+        for(int j = 0 ; j < other.length ; j++,index++) {
+            mergedArray.items[index] = other[j];
+        }
+        mergedArray.count = count + other.length;
+        return mergedArray;
     }
 
 }
