@@ -39,17 +39,26 @@ public class Array {
 
     // Traverse method
     void Traverse() {
-        for(int i = 0 ; i < items.length ; i++) {
-            System.out.print(items[i] + " ");
+        if(isFull()) {
+            System.out.println("The array is already empty");
+            return;
+        }else {
+            for(int i = 0 ; i < items.length ; i++) {
+                System.out.print(items[i] + " ");
+            }
+            System.out.println();
         }
-        System.out.println();
     }
 
     // Search method
     boolean Search(int key) {
-        for(int i = 0 ; i < count ; i++) {
-            if(items[i] == key) {
-                return true;
+        if(isFull()) {
+            System.out.println("The array is already empty");
+        }else {
+            for(int i = 0 ; i < count ; i++) {
+                if(items[i] == key) {
+                    return true;
+                }
             }
         }
             return false;
@@ -59,11 +68,26 @@ public class Array {
     void insert(int positon , int newItem) {
         if(isFull()) {
             System.out.println("Sorry , You can't add new item");
+            return;
         }else {
         for(int i = count ; i > positon ; i--) {
             items[i] = items[i-1];
         }
         items[positon] = newItem;
+        count++;
+        }
+    }
+
+    // Delete method
+    void Delete(int index) {
+        if(isFull()) {
+            System.out.println("The array is already empty");
+            return;
+        }else {
+            for(int i = index ; i < count-1 ; i++) {
+                items[i] = items[i+1];
+            }
+            count--;
         }
     }
 
