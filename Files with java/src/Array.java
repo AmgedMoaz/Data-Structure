@@ -43,7 +43,7 @@ public class Array {
             System.out.println("The array is already empty");
             return;
         }else {
-            for(int i = 0 ; i < items.length ; i++) {
+            for(int i = 0 ; i < count ; i++) {
                 System.out.print(items[i] + " ");
             }
             System.out.println();
