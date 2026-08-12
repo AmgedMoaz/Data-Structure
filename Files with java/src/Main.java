@@ -10,7 +10,7 @@ public class Main {
         arr.Append(10);
         arr.Append(20);
         arr.Append(30);
-        arr.insert(2,25);
+        arr.Insert(2,25);
         arr.Append(40);
 
         System.out.println(arr.getCount());
@@ -25,10 +25,22 @@ public class Main {
         }
          */
 
+        /*
         arr.Delete(2);
         arr.Traverse();
         arr.Delete(0);
         arr.Traverse();
+         */
+
+        arr = arr.Enlarge(10);
+        arr.Append(50);
+        arr.Append(60);
+        arr.Append(70);
+        arr.Append(80);
+        arr.Insert(6,55);
+
+        arr.Traverse();
+
 
     }
 }

@@ -22,6 +22,11 @@ public class Array {
         return (count == items.length);
     }
 
+    // isEmpty
+    boolean isEmpty() {
+        return (count == 0);
+    }
+
 
     // Append method
     void Append(int newItem) {
@@ -39,7 +44,7 @@ public class Array {
 
     // Traverse method
     void Traverse() {
-        if(isFull()) {
+        if(isEmpty()) {
             System.out.println("The array is already empty");
             return;
         }else {
@@ -52,7 +57,7 @@ public class Array {
 
     // Search method
     boolean Search(int key) {
-        if(isFull()) {
+        if(isEmpty()) {
             System.out.println("The array is already empty");
         }else {
             for(int i = 0 ; i < count ; i++) {
@@ -65,7 +70,7 @@ public class Array {
     }
 
     // Insert method
-    void insert(int positon , int newItem) {
+    void Insert(int positon , int newItem) {
         if(isFull()) {
             System.out.println("Sorry , You can't add new item");
             return;
@@ -80,7 +85,7 @@ public class Array {
 
     // Delete method
     void Delete(int index) {
-        if(isFull()) {
+        if(isEmpty()) {
             System.out.println("The array is already empty");
             return;
         }else {
@@ -88,6 +93,36 @@ public class Array {
                 items[i] = items[i+1];
             }
             count--;
+        }
+    }
+
+    // Shape 1 Enlarge method
+    /*
+    int[] Enlarge(int newSize) {
+        if(newSize > items.length) {
+            int[] newArray = new int[newSize];
+            for(int i = 0 ; i < count ; i++) {
+                newArray[i] = items[i];
+            }
+            newArray.count = this.count;
+            return newArray;
+        }else {
+            return items;
+        }
+    }
+     */
+
+    // Shape 2 Enlarge method by more OOP
+    Array Enlarge(int newSize) {
+        if(newSize > items.length) {
+            Array newArray = new Array(newSize);
+            for(int i = 0 ; i < count ; i++) {
+                newArray.items[i] = this.items[i];
+            }
+            newArray.count = this.count;
+            return newArray;
+        }else {
+            return this;
         }
     }
 
