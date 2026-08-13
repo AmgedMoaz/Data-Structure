@@ -63,6 +63,7 @@ public class SingleLinkedList {
         }
     }
 
+    // ال Garbage collector اللي موجود في java هيقوم لوحده بحذف ال node اللي مبقاش فيه pointer يشاور عليها اوتماتيكيا من الميموري
     // Delete first element
     public void DeleteFirst() {
         if(isEmpty()) {
@@ -130,6 +131,22 @@ public class SingleLinkedList {
             System.out.println();
         }
     }
+
+    // Count method
+    public int Count() {
+        int count = 0;
+        if(isEmpty()) {
+            return count;
+        }else {
+            Node current = head;
+            while(current != null) {
+                current = current.next;
+                count++;
+            }
+            return count;
+        }
+    }
+
 
 
 

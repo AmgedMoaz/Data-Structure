@@ -73,6 +73,8 @@ public class Main {
         list.DeleteSpecificElement(60);
         list.Traverse();
 
+        System.out.println(list.Count());
+
 
     }
 }
