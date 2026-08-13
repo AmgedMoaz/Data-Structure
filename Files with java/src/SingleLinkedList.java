@@ -159,11 +159,21 @@ public class SingleLinkedList {
                 return false;
     }
 
-
-
-
-
-
-
+    // Merge method
+    public void Merge(SingleLinkedList list2) {
+        // list2 == null   mean that the list2 isn't pointing to any object  (SingleLinkedList list2;  not  SingleLinkedList list2 = new SingleLinkedList())
+        // list2.isEmpty() mean that the list2 is empty
+        if(list2 == null || list2.isEmpty()) {
+            return;
+        }else if(head == null) {
+            head = list2.head;
+        }else {
+            Node current = head;
+            while(current.next != null) {
+                current = current.next;
+            }
+            current.next = list2.head;
+        }
+    }
 
 }

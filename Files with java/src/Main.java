@@ -81,6 +81,13 @@ public class Main {
             System.out.println("not found");
         }
 
+        SingleLinkedList list2 = new SingleLinkedList();
+        list2.Append(40);
+        list2.Append(50);
+        list2.Append(60);
+        list.Merge(list2);
+        list2.Traverse();
+        list.Traverse();
 
     }
 }
