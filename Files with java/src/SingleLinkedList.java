@@ -42,6 +42,9 @@ public class SingleLinkedList {
         if(position == 0 ) {
             InsertFirst(element);
             return;
+        }else if(position < 0) {
+            System.out.println("The position can't be negative");
+            return;
         }else {
             Node newnode = new Node(element);
             int index = 0;
@@ -76,11 +79,16 @@ public class SingleLinkedList {
             System.out.println("The Linked List is already empty");
             return;
         }else {
-            Node current = head;
-            while(current.next.next != null) {
-                current = current.next;
+            // if head data == element
+            if(head.next == null) {
+                head = null;
+            }else {
+                Node current = head;
+                while(current.next.next != null) {
+                    current = current.next;
+                }
+                current.next = null;
             }
-            current.next = null;
         }
     }
 
