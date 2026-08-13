@@ -62,6 +62,12 @@ public class SingleLinkedList {
 
     // Delete first element
     public void DeleteFirst() {
+        if(isEmpty()) {
+            System.out.println("The Linked List is already empty");
+            return;
+        }else {
+            head = head.next;
+        }
 
     }
 

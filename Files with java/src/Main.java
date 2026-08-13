@@ -64,6 +64,9 @@ public class Main {
         list.InsertAtPosition(25,4);
         list.Traverse();
 
+        list.DeleteFirst();
+        list.Traverse();
+
 
     }
 }
