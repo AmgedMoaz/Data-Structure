@@ -68,12 +68,20 @@ public class SingleLinkedList {
         }else {
             head = head.next;
         }
-
     }
 
     // Delete last element
     public void DeleteLast() {
-
+        if(isEmpty()) {
+            System.out.println("The Linked List is already empty");
+            return;
+        }else {
+            Node current = head;
+            while(current.next.next != null) {
+                current = current.next;
+            }
+            current.next = null;
+        }
     }
 
     // Delete specific element

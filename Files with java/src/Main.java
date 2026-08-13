@@ -67,6 +67,10 @@ public class Main {
         list.DeleteFirst();
         list.Traverse();
 
+        list.DeleteLast();
+        list.Traverse();
+
+
 
     }
 }
