@@ -14,7 +14,13 @@ public class SingleLinkedList {
 
     // Insert first method
     public void InsertFirst(int element) {
-
+        Node newnode = new Node(element);
+        if(isEmpty()) {
+            head = newnode;
+        }else {
+            newnode.next = head;
+            head = newnode;
+        }
     }
 
     // Insert last method

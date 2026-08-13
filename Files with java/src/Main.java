@@ -57,5 +57,8 @@ public class Main {
         list.Append(40);
         list.Traverse();
 
+        list.InsertFirst(5);
+        list.Traverse();
+
     }
 }
