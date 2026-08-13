@@ -39,7 +39,25 @@ public class SingleLinkedList {
 
     // Insert at position method
     public void InsertAtPosition(int element , int position) {
-
+        if(position == 0 ) {
+            InsertFirst(element);
+            return;
+        }else {
+            Node newnode = new Node(element);
+            int index = 0;
+            Node current = head;
+            // Traverse to position just before the specific position
+            while(current != null && index < position-1) {
+                current = current.next;
+                index++;
+            }
+            if(current == null) {
+                System.out.println("Position is out of bounds..!");
+                return;
+            }
+            newnode.next = current.next;
+            current.next = newnode;
+        }
     }
 
     // Delete first element

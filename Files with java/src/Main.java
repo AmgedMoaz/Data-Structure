@@ -60,5 +60,10 @@ public class Main {
         list.InsertFirst(5);
         list.Traverse();
 
+        list.InsertAtPosition(15,2);
+        list.InsertAtPosition(25,4);
+        list.Traverse();
+
+
     }
 }
