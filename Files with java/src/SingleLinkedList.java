@@ -7,6 +7,11 @@ public class SingleLinkedList {
 
     // Methods
 
+    // Check is empty or not
+    public boolean isEmpty() {
+        return (head == null);
+    }
+
     // Insert first method
     public void InsertFirst(int element) {
 
@@ -14,7 +19,16 @@ public class SingleLinkedList {
 
     // Insert last method
     public void Append(int element) {
-
+        Node newnode = new Node(element);
+        if(isEmpty()) {
+            head = newnode;
+        }else {
+            Node current = head;
+            while(current.next != null) {
+                current = current.next;
+            }
+            current.next = newnode;
+        }
     }
 
     // Insert at position method
