@@ -75,6 +75,12 @@ public class Main {
 
         System.out.println(list.Count());
 
+        if(list.Search(15)) {
+            System.out.println("is found");
+        }else {
+            System.out.println("not found");
+        }
+
 
     }
 }
