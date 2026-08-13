@@ -70,6 +70,8 @@ public class Main {
         list.DeleteLast();
         list.Traverse();
 
+        list.DeleteSpecificElement(60);
+        list.Traverse();
 
 
     }

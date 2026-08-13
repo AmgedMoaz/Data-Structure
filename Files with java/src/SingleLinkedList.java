@@ -86,7 +86,26 @@ public class SingleLinkedList {
 
     // Delete specific element
     public void DeleteSpecificElement(int element) {
-
+        if(isEmpty()) {
+            System.out.println("The Linked List is already empty");
+            return;
+        }else {
+            // if head data == element
+            if(head.data == element) {
+                DeleteFirst();
+            }else {
+                Node current = head;
+                while(current.next != null && current.next.data != element) {
+                    current = current.next;
+                }
+                if(current.next == null) {
+                    System.out.println("The element you entered is not found");
+                    return;
+                }else {
+                    current.next = current.next.next;
+                }
+            }
+        }
     }
 
     // Display or Travers method
