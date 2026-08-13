@@ -6,6 +6,7 @@ public class Main {
     static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
 
+        /*  [ Array ]
         Array arr = new Array(8);
         arr.Append(10);
         arr.Append(20);
@@ -17,20 +18,16 @@ public class Main {
 
         arr.Traverse();
 
-        /*
         if(arr.Search(40)){
             System.out.println("Found");
         }else {
             System.out.println("Not found");
         }
-         */
 
-        /*
         arr.Delete(2);
         arr.Traverse();
         arr.Delete(0);
         arr.Traverse();
-         */
 
         arr = arr.Enlarge(10);
         arr.Append(50);
@@ -49,6 +46,16 @@ public class Main {
         arr = arr.Merge(other);
 
         arr.Traverse();
+         */
+
+        SingleLinkedList list = new SingleLinkedList();
+        list.Traverse();
+
+        list.Append(10);
+        list.Append(20);
+        list.Append(30);
+        list.Append(40);
+        list.Traverse();
 
     }
 }
