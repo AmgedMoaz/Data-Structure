@@ -24,5 +24,8 @@ public class Main {
         list1.insertAtPosition(15,2);
         list1.traverseForward();
 
+        list1.deleteFirst();
+        list1.traverseForward();
+
     }
 }

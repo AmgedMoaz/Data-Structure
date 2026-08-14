@@ -116,5 +116,17 @@ public class DoublyLinkedList {
         return count;
     }
 
+    // Delete first method
+    public void deleteFirst() {
+        if(isEmpty()) {
+            System.out.println("The list is already empty");
+            return;
+        }else if(head.next == null) {
+            head = null;
+        }else {
+            head = head.next;
+        }
+    }
+
 
 }
