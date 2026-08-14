@@ -125,6 +125,23 @@ public class DoublyLinkedList {
             head = null;
         }else {
             head = head.next;
+            head.prev = null;
+        }
+    }
+
+    // Delete last method
+    public void deleteLast() {
+        if(isEmpty()) {
+            System.out.println("The list is already empty");
+            return;
+        }else if(head.next == null) {
+            head = null;
+        }else {
+            Node current = head;
+            while(current.next != null) {
+                current = current.next;
+            }
+            current.prev.next = null;
         }
     }
 
