@@ -1,4 +1,4 @@
-// Linked List as a data structure
+// Single Linked List as a data structure
 
 public class SingleLinkedList {
 
