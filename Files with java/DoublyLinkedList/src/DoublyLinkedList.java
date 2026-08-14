@@ -28,6 +28,48 @@ public class DoublyLinkedList {
         }
     }
 
+    // Insert first method
+    public void insertFirst(int element) {
+        Node newnode = new Node(element);
+        if (isEmpty()) {
+            head = newnode;
+            return;
+        }else {
+            newnode.next = head;
+            head.prev = newnode;
+            head = newnode;
+        }
+    }
+
+    // Insert at position method
+    public void insertAtPosition(int element , int position) {
+        if(position < 0) {
+            System.out.println("The position can't be negative");
+            return;
+        }else if(position == 0) {
+            insertFirst(element);
+            return;
+        }else if(position == count()) {
+            append(element);
+            return;
+        }else if (position > count()) {
+            System.out.println("The position is out of bounds..!");
+            return;
+        }else {
+            Node newnode = new Node(element);
+            int index = 0;
+            Node current = head;
+            while(index < position-1) {
+                current = current.next;
+                index++;
+            }
+                newnode.next = current.next;
+                current.next.prev = newnode;
+                newnode.prev = current;
+                current.next = newnode;
+        }
+    }
+
     // Traverse forward method
     public void traverseForward() {
         if(isEmpty()) {

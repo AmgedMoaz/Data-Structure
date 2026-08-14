@@ -16,8 +16,13 @@ public class Main {
         list1.traverseForward();
         list1.traverseBackward();
 
-        System.out.print(list1.count());
+        System.out.println(list1.count());
 
+        list1.insertFirst(5);
+        list1.traverseForward();
+
+        list1.insertAtPosition(15,2);
+        list1.traverseForward();
 
     }
 }
