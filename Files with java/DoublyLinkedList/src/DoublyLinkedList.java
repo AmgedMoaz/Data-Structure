@@ -145,5 +145,32 @@ public class DoublyLinkedList {
         }
     }
 
+    // Delete specific element method
+    public void deleteSpecificElement(int element) {
+        if(isEmpty()) {
+            System.out.println("The list is already empty");
+            return;
+        }else {
+            if(head.data == element) {
+                deleteFirst();
+                return;
+            }else {
+                Node current = head;
+                while(current != null && current.data != element) {
+                    current = current.next;
+                }
+                if(current == null) {
+                    System.out.println("The element in not found");
+                    return;
+                }else if(current.next == null) {
+                    deleteLast();
+                    return;
+                }else {
+                current.next.prev = current.prev;
+                current.prev.next = current.next;
+                }
+            }
+        }
+    }
 
 }

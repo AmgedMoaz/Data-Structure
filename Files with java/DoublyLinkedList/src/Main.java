@@ -27,5 +27,11 @@ public class Main {
         list1.deleteFirst();
         list1.traverseForward();
 
+        list1.deleteLast();
+        list1.traverseForward();
+
+        list1.deleteSpecificElement(15);
+        list1.traverseForward();
+
     }
 }
