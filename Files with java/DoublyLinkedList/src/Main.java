@@ -16,6 +16,8 @@ public class Main {
         list1.traverseForward();
         list1.traverseBackward();
 
+        System.out.print(list1.count());
+
 
     }
 }

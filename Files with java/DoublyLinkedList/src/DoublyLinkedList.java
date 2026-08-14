@@ -12,7 +12,6 @@ public class DoublyLinkedList {
         return (head == null);
     }
 
-
     // Inert Last method
     public void append(int element) {
         Node newnode = new Node(element);
@@ -51,9 +50,11 @@ public class DoublyLinkedList {
             return;
         }else {
             Node current = head;
+            // Go to the last node
             while(current.next != null) {
                 current = current.next;
             }
+            // Traverse backward
             while(current != null) {
                 System.out.print(current.data + " ");
                 current = current.prev;
@@ -62,6 +63,16 @@ public class DoublyLinkedList {
         }
     }
 
+    // Count method
+    public int count() {
+        int count = 0;
+        Node current = head;
+        while(current != null) {
+            count++;
+            current = current.next;
+        }
+        return count;
+    }
 
 
 }
