@@ -12,8 +12,10 @@ public class Main {
         list.push(10);
         list.push(20);
         list.push(30);
+        list.display();
 
         list.pop();
+        list.display();
 
         System.out.print("Value in top : " + list.peek());
 

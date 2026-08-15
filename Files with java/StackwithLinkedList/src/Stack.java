@@ -5,7 +5,6 @@ public class Stack {
     // Fields
     Node top;
 
-
     // Overloading constructor
     public Stack() {
         top = null;
@@ -49,6 +48,21 @@ public class Stack {
             return -1;
         }else {
             return top.data;
+        }
+    }
+
+    // Display method
+    void display() {
+        if(isEmpty()) {
+            System.out.print("Stack is already empty");
+        }else {
+            Node current = top;
+            System.out.print("Stack items : ");
+            while(current != null) {
+                System.out.print(current.data + " ");
+                current = current.next;
+            }
+            System.out.println();
         }
     }
 
