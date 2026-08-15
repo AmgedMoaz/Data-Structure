@@ -185,4 +185,21 @@ public class DoublyLinkedList {
         return false;
     }
 
+    // Merge method
+    public void merge(DoublyLinkedList list2) {
+        if(list2 == null || list2.isEmpty()) {
+            return;
+        }
+        if(head == null) {
+            head = list2.head;
+        }else {
+            Node current = head;
+            while(current.next != null) {
+                current = current.next;
+            }
+            current.next = list2.head;
+            current.next.prev = current;
+        }
+    }
+
 }

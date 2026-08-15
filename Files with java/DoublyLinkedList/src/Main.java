@@ -34,10 +34,17 @@ public class Main {
         list1.traverseForward();
 
         if(list1.search(15)) {
-            System.out.print("Found");
+            System.out.println("Found");
         }else {
-            System.out.print("Not found");
+            System.out.println("Not found");
         }
+
+        DoublyLinkedList list2 = new DoublyLinkedList();
+        list2.append(40);
+        list2.append(50);
+        list2.insertFirst(35);
+        list1.merge(list2);
+        list1.traverseForward();
 
     }
 }
