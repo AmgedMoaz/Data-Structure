@@ -30,6 +30,18 @@ public class Stack {
         System.out.println(value + " is pushed in stack");
     }
 
+    // Pop method
+    int pop() {   // equals to [ public int pop() {} ]
+        if(isEmpty()) {
+            System.out.println("Stack is already empty");
+            return -1;
+        }else {
+            int poppedValue = top.data;
+            top = top.next;
+            return poppedValue;
+        }
+    }
+
 
 
 
