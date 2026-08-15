@@ -8,10 +8,14 @@ public class Main {
 
         Stack list = new Stack();
         list.pop();
+
         list.push(10);
         list.push(20);
         list.push(30);
+
         list.pop();
+
+        System.out.print("Value in top : " + list.peek());
 
     }
 }

@@ -42,7 +42,14 @@ public class Stack {
         }
     }
 
-
-
+    // Top method
+    public int peek() {
+        if (isEmpty()) {
+            System.out.print("Stack is already empty");
+            return -1;
+        }else {
+            return top.data;
+        }
+    }
 
 }
