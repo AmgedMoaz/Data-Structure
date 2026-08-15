@@ -34,6 +34,17 @@ public class Stack {
         }
     }
 
+    // Pop method
+    public int pop() {
+        if(isEmpty()) {
+            System.out.println("Stack underflow! Stack is empty");
+            return -1;
+        }else {
+            int poppedValue = stackArray[top--];  // equals to  [int poppedValue = stackArray[top];  top--;]
+            return poppedValue;
+        }
+    }
+
 
 
 }

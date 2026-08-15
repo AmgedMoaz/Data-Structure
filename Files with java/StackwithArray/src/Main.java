@@ -11,5 +11,7 @@ public class Main {
         ob.push(12);
         ob.push(2004);
 
+        System.out.println(ob.pop());
+
     }
 }
