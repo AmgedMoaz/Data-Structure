@@ -55,7 +55,18 @@ public class Stack {
         }
     }
 
-
-
+    // Display method
+    public void display() {
+        if(isEmpty()) {
+            System.out.println("Stack is already empty");
+            return;
+        }else {
+            System.out.print("Stack items : ");
+            for(int i = 0 ; i <= top ; i++) {
+                System.out.print(stackArray[i] + " ");
+            }
+            System.out.println();
+        }
+    }
 
 }
