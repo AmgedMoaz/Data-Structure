@@ -33,5 +33,11 @@ public class Main {
         list1.deleteSpecificElement(15);
         list1.traverseForward();
 
+        if(list1.search(15)) {
+            System.out.print("Found");
+        }else {
+            System.out.print("Not found");
+        }
+
     }
 }
