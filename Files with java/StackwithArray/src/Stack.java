@@ -29,7 +29,7 @@ public class Stack {
         if(isFull()) {
             System.out.println("Stack overflow! Can't push " + value);
         }else {
-            stackArray[top++] = value;  // equals to  stackArray[top] = value;  top++;
+            stackArray[++top] = value;  // equals to  [ top++;  stackArray[top] = value;]
             System.out.println(value + " is pushed to stack");
         }
     }
