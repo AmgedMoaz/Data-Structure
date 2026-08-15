@@ -7,7 +7,7 @@ public class Stack {
 
 
     // Overloading constructor
-    public Stack(int size) {
+    public Stack() {
         top = null;
     }
 
@@ -27,7 +27,7 @@ public class Stack {
             newnode.next = top;
             top = newnode;
         }
-        System.out.print(value + "is pushed in stack");
+        System.out.println(value + " is pushed in stack");
     }
 
 
