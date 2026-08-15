@@ -11,7 +11,9 @@ public class Main {
         ob.push(12);
         ob.push(2004);
 
-        System.out.println(ob.pop());
+        System.out.println("After pop " + ob.pop());
+
+        System.out.println("Top is : " + ob.top());
 
     }
 }

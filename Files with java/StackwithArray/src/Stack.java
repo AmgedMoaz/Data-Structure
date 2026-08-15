@@ -45,6 +45,17 @@ public class Stack {
         }
     }
 
+    // Top method
+    public int top() {
+        if(isEmpty()) {
+            System.out.println("Stack is already empty");
+            return -1;
+        }else {
+            return stackArray[top];
+        }
+    }
+
+
 
 
 }
