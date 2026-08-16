@@ -43,5 +43,17 @@ public class Queue {
         }
     }
 
+    // Dequeue method
+    int dequeue() {
+        if(isEmpty()) {
+            System.out.print("Queue underflow...! Nothing to dequeue");
+            return -1;
+        }else {
+            int removedValue = queue[rear--];
+            System.out.println(removedValue + " is Dequeued");
+            return removedValue;
+        }
+    }
+
 
 }
