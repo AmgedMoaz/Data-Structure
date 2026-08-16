@@ -29,16 +29,16 @@ public class Queue {
     // Enqueue method
     public void enqueue(int value) {
         if(isFull()) {
-            System.out.print("Queue overflow..! Can't add " + value);
+            System.out.println("Queue overflow..! Can't add " + value);
             return;
         }else {
             if(isEmpty()) {
                 front = rear = 0;
                 queue[front] = value;
-                System.out.print(value + " is Enqueued");
+                System.out.println(value + " is Enqueued");
             }else {
                 queue[++rear] = value;
-                System.out.print(value + " is Enqueued");
+                System.out.println(value + " is Enqueued");
             }
         }
     }
@@ -46,10 +46,10 @@ public class Queue {
     // Dequeue method
     int dequeue() {
         if(isEmpty()) {
-            System.out.print("Queue underflow...! Nothing to dequeue");
+            System.out.println("Queue underflow...! Nothing to dequeue");
             return -1;
         }else {
-            int removedValue = queue[rear--];
+            int removedValue = queue[front++];
             System.out.println(removedValue + " is Dequeued");
             return removedValue;
         }
@@ -58,7 +58,7 @@ public class Queue {
     // Peek method
     public int getFront() {
         if(isEmpty()) {
-            System.out.print("Queue is empty");
+            System.out.println("Queue is empty");
             return -1;
         }else {
             return queue[front];
@@ -68,11 +68,11 @@ public class Queue {
     // Display method
     public void display() {
         if(isEmpty()) {
-            System.out.print("Queue is already empty");
+            System.out.println("Queue is already empty");
             return;
         }else {
             System.out.print("Queue items : ");
-            for(int i = 0 ; i <= rear ; i++) {
+            for(int i = front ; i <= rear ; i++) {
                 System.out.print(queue[i] + " ");
             }
             System.out.println();
