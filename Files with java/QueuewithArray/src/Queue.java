@@ -21,5 +21,9 @@ public class Queue {
         return (rear == size -1);
     }
 
+    // isEmpty method
+    boolean isEmpty() {
+        return (front == -1);
+    }
 
 }
