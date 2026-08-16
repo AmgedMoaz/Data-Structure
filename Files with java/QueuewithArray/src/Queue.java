@@ -16,4 +16,10 @@ public class Queue {
         rear = -1;
     }
 
+    // isFull method
+    public boolean isFull() {
+        return (rear == size -1);
+    }
+
+
 }
