@@ -55,5 +55,18 @@ public class Queue {
         }
     }
 
+    // Display method
+    public void display() {
+        if(isEmpty()) {
+            System.out.print("Queue is already empty");
+            return;
+        }else {
+            System.out.print("Queue items : ");
+            for(int i = 0 ; i <= rear ; i++) {
+                System.out.print(queue[i] + " ");
+            }
+            System.out.println();
+        }
+    }
 
 }
