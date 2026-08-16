@@ -55,6 +55,16 @@ public class Queue {
         }
     }
 
+    // Peek method
+    public int getFront() {
+        if(isEmpty()) {
+            System.out.print("Queue is empty");
+            return -1;
+        }else {
+            return queue[front];
+        }
+    }
+
     // Display method
     public void display() {
         if(isEmpty()) {
