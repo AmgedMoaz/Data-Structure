@@ -22,12 +22,12 @@ public class Queue {
         Node newnode = new Node(value);
         if(isEmpty()) {
             front = rear = newnode;
-            System.out.println(value + " is pushed");
+            System.out.println(value + " is enqueued");
             return;
         }else {
             rear.next = newnode;
             rear = newnode;
-            System.out.println(value + " is pushed");
+            System.out.println(value + " is enqueued");
         }
     }
 
@@ -41,6 +41,22 @@ public class Queue {
             front = front.next;
             System.out.println(removedvalue + " is dequeued");
             return removedvalue;
+        }
+    }
+
+    // Display method
+    public void display() {
+        if(isEmpty()) {
+            System.out.println("Queue is already empty");
+            return;
+        }else {
+            Node current = front;
+            System.out.println("Queue items : ");
+            while(current != null) {
+                System.out.println(current.data + " " );
+                current = current.next;
+            }
+            System.out.println();
         }
     }
 
