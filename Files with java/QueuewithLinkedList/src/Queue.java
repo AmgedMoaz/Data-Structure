@@ -60,4 +60,10 @@ public class Queue {
         }
     }
 
+    // Peek method
+    int peek() {
+        return front.data;
+    }
+
+
 }
