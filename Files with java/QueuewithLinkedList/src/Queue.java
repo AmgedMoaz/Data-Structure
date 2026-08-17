@@ -51,9 +51,9 @@ public class Queue {
             return;
         }else {
             Node current = front;
-            System.out.println("Queue items : ");
+            System.out.print("Queue items : ");
             while(current != null) {
-                System.out.println(current.data + " " );
+                System.out.print(current.data + " " );
                 current = current.next;
             }
             System.out.println();
@@ -75,7 +75,5 @@ public class Queue {
         }
         return count;
     }
-
-
 
 }
