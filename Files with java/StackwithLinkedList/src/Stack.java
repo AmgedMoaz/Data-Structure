@@ -5,7 +5,7 @@ public class Stack {
     // Fields
     Node top;
 
-    // Overloading constructor
+    // Default constructor
     public Stack() {
         top = null;
     }
