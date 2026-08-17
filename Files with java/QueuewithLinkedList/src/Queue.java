@@ -65,5 +65,17 @@ public class Queue {
         return front.data;
     }
 
+    // Count method
+    int count() {
+        int count = 0;
+        Node current = front;
+        while(current != null) {
+            count++;
+            current = current.next;
+        }
+        return count;
+    }
+
+
 
 }
