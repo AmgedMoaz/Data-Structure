@@ -1,3 +1,5 @@
+// The shape of every node in queue with Linked list
+
 public class Node {
 
     // Fields
