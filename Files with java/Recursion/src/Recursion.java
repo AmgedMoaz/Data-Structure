@@ -30,7 +30,15 @@ public class Recursion {
             return 1;
         else
             return x*power(x,n-1);
-
     }
+
+    // Fibonacci method
+    public static int fib(int n) {
+        if(n <= 1)
+            return n;
+        else
+            return fib(n-1) + fib(n-2);
+    }
+
 
 }
