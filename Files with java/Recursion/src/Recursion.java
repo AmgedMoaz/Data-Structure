@@ -11,33 +11,33 @@ public class Recursion {
     // Sum method by recursion
     static int sum(int n) {
         if(n == 1)
-            return 1;
+            return 1;                // base case
         else
-            return  n+sum(n-1);
+            return  n+sum(n-1);    // recursive case
     }
 
     // Factorial method by recursion
     public static int factorial(int n) {
         if(n == 1)
-            return 1;
+            return 1;                      // base case
         else
-            return n*factorial(n-1);
+            return n*factorial(n-1);     // recursive case
     }
 
     // Power method by recursion
     static int power(int x , int n) {
         if(n == 0)
-            return 1;
+            return 1;                      // base case
         else
-            return x*power(x,n-1);
+            return x*power(x,n-1);       // recursive case
     }
 
     // Fibonacci method
     public static int fib(int n) {
         if(n <= 1)
-            return n;
+            return n;                         // base case
         else
-            return fib(n-1) + fib(n-2);
+            return fib(n-1) + fib(n-2);  // recursive case
     }
 
 
