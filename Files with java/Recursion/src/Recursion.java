@@ -17,6 +17,8 @@ public class Recursion {
         int x = input.nextInt();
         System.out.println("The result of " + x + " power " + n + " : " + power(x,n));
 
+        System.out.println("The result of Fibonacci of " + n + " : " + fib(n));
+
     }
 
     // Sum method by recursion
