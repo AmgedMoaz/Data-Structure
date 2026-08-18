@@ -13,6 +13,10 @@ public class Recursion {
 
         System.out.println("Factorial of number " + n + " : " + factorial(n));
 
+        System.out.print("Enter the base number : ");
+        int x = input.nextInt();
+        System.out.println("The result of " + x + " power " + n + " : " + power(x,n));
+
     }
 
     // Sum method by recursion
