@@ -11,6 +11,8 @@ public class Recursion {
 
         System.out.println("Sum of numbers from 1 to " + n + " : " + sum(n));
 
+        System.out.println("Factorial of number " + n + " : " + factorial(n));
+
     }
 
     // Sum method by recursion
