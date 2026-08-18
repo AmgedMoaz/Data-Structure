@@ -6,6 +6,11 @@ public class Recursion {
     static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
 
+        System.out.print("Enter the number : ");
+        int n = input.nextInt();
+
+        System.out.println("Sum of numbers from 1 to " + n + " : " + sum(n));
+
     }
 
     // Sum method by recursion
@@ -39,6 +44,5 @@ public class Recursion {
         else
             return fib(n-1) + fib(n-2);  // recursive case
     }
-
 
 }
