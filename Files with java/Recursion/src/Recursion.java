@@ -16,4 +16,12 @@ public class Recursion {
             return  n+sum(n-1);
     }
 
+    // Factorial method by recursion
+    public static int factorial(int n) {
+        if(n == 1)
+            return 1;
+        else
+            return n*factorial(n-1);
+    }
+
 }
