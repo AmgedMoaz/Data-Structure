@@ -15,6 +15,7 @@ public class Main {
 
         System.out.println(students.get(1002));
 
+        System.out.println(students.containsKey(1003));
 
     }
 }
