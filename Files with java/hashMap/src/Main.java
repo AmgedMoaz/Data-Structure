@@ -17,5 +17,7 @@ public class Main {
 
         System.out.println(students.containsKey(1003));
 
+        students.remove(1001);
+
     }
 }
