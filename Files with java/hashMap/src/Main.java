@@ -13,5 +13,8 @@ public class Main {
         students.put(1003, "Omar");
 
 
+        System.out.println(students.get(1002));
+
+
     }
 }
