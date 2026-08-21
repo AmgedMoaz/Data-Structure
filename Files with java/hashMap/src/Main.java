@@ -19,5 +19,7 @@ public class Main {
 
         students.remove(1001);
 
+        System.out.println(students);
+
     }
 }
