@@ -1,4 +1,4 @@
-// Write a class to show meaning of hash map
+// Write a class to show meaning of hashmap
 
 import java.util.HashMap;
 import java.util.Scanner;
