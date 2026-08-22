@@ -12,5 +12,7 @@ public class Main {
         names.add("Omar");
         names.add("Ahmed");
 
+        System.out.println(names);
+
     }
 }
