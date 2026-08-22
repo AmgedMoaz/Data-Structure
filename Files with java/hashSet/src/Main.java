@@ -7,5 +7,10 @@ public class Main {
 
         HashSet<String> names = new HashSet<>();
 
+        names.add("Ahmed");
+        names.add("Ali");
+        names.add("Omar");
+        names.add("Ahmed");
+
     }
 }
