@@ -20,5 +20,9 @@ public class Example {
         System.out.println("S1 list : " + s1);
         System.out.println("S2 list : " + s2);
 
+        s1.removeAll(s2);
+        System.out.println("S1 list : " + s1);
+        System.out.println("S2 list : " + s2);
+
     }
 }
