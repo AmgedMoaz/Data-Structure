@@ -16,6 +16,10 @@ public class Main {
 
         System.out.println(names.contains("Ali"));
 
+        names.remove("Omar");
+
+        System.out.println(names);
+
 
     }
 }
