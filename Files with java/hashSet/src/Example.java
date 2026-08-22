@@ -11,5 +11,11 @@ public class Example {
 
      int numbers[] = {1,2,3,4,5,1,2,6,7,8,5,10,10,1};
 
+        for(int i = 0 ; i < numbers.length ; i++) {
+            // شرط حل المسألة
+            if(!(s1.add(numbers[i])))
+                s2.add(numbers[i]);
+        }
+
     }
 }
