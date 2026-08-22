@@ -14,5 +14,8 @@ public class Main {
 
         System.out.println(names);
 
+        System.out.println(names.contains("Ali"));
+
+
     }
 }
