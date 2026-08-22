@@ -17,5 +17,8 @@ public class Example {
                 s2.add(numbers[i]);
         }
 
+        System.out.println("S1 list : " + s1);
+        System.out.println("S2 list : " + s2);
+
     }
 }
