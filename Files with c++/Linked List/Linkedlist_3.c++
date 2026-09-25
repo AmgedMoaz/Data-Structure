@@ -3,54 +3,54 @@
 using namespace std;
 
 class Node {
-  public:
-   int Data;
-   Node* Next;
+    public:
+    int Data;
+    Node* Next;
 };
 
 class Linkedlist {
     public:
-    Node* head;
+    Node* head;       
 
-    Linkedlist(){
+    Linkedlist() {
         head = NULL;
     }
 
-     bool isEmpty() {
-         return (head == NULL);
-     }
+    bool isEmpty() {
+        return (head == NULL);
+    }
 
-     void insertFirst(int newValue) {
-         Node* newNode = new Node();
-         newNode->Data = newValue;
-         if(isEmpty()) {
-             newNode->Next = NULL;
-             head = newNode;
-            } else {
-                newNode->Next = head;
-                head = newNode;
-            }
-     }
+    void insertFirst(int newValue) {
+        Node* newNode = new Node();
+        newNode->Data = newValue;
+        if(isEmpty()) {
+            newNode->Next = NULL;
+            head = newNode;
+        }else {
+            newNode->Next = head;
+            head = newNode;
+        }
+    }
 
-     void Display() {
-            Node* Temp = head;
-            while(Temp != NULL) {
-                cout << Temp->Data << " ";
-                Temp = Temp->Next;
-            }
-     }
+    void Display() {
+        Node* Temp = head;
+        while(Temp != NULL) {
+            cout << Temp->Data << " ";
+            Temp = Temp->Next;
+        }
+    }
 
-     int Count() {
-         int counter = 0;
-         Node* Temp = head;
-            while(Temp != NULL) {
-                counter++;
-                Temp = Temp->Next;
-            }
-            return counter;
-     } 
+    int Count() {
+        int counter = 0;
+        Node* Temp = head;
+        while(Temp != NULL) {
+            counter++;
+            Temp = Temp->Next;
+        }
+        return counter;
+    } 
 
-     bool isFound(int key){
+    bool isFound(int key){
         bool found = false;
         Node* Temp = head;
         while(Temp != NULL) {
@@ -59,84 +59,82 @@ class Linkedlist {
                 found = true;
                 break;
              }
-             Temp = Temp->Next;
-            }
-            return found;
+            Temp = Temp->Next;
         }
+        return found;
+    }
 
-        void insertBefore(int item , int newValue) {
-         Node* newNode = new Node();
-         newNode->Data = newValue;
-         Node* Temp = head;
-         if(isEmpty()) {
-               cout << "List is already empty U can't insert before any item" << endl;
-         }
-         else {
+    void insertBefore(int item , int newValue) {
+        Node* newNode = new Node();
+        newNode->Data = newValue;
+        Node* Temp = head;
+        if(isEmpty()) {
+           cout << "List is already empty U can't insert before any item" << endl;
+        }
+        else {
             if(isFound(item)) {
                 if(Temp->Data == item) {
-                  insertFirst(newValue);
-                  return;
-                 }else {
-             while(Temp->Next!= NULL && Temp->Next->Data != item) {
-                 Temp = Temp->Next;
-             }
-             newNode->Next = Temp->Next;
-             Temp->Next = newNode;
+                    insertFirst(newValue);
+                    return;
+                }else {
+                    while(Temp->Next!= NULL && Temp->Next->Data != item) {
+                        Temp = Temp->Next;
+                    }
+                    newNode->Next = Temp->Next;
+                    Temp->Next = newNode;
+                }
             }
-        }
-            
             else {
                 cout << "Item is not found in the list U can't insert before it" << endl;
             }
         }
     }
 
-       void Append(int newValue) {
-           if(isEmpty()) {
-                insertFirst(newValue);
-                } else {
-                    Node* newNode = new Node();
-                    newNode->Data = newValue;
-                    newNode->Next = NULL;
-                    Node* Temp = head;
-                    while(Temp->Next != NULL) {
-                         Temp = Temp->Next;
-                    }
-                    Temp->Next = newNode;
-                }   
+    void Append(int newValue) {
+        if(isEmpty()) {
+           insertFirst(newValue);
+        } else {
+            Node* newNode = new Node();
+            newNode->Data = newValue;
+            newNode->Next = NULL;
+            Node* Temp = head;
+            while(Temp->Next != NULL) {
+                Temp = Temp->Next;
             }
+            Temp->Next = newNode;
+        }   
+    }
 
-            
-       void Delete(int item) {
+    void Delete(int item) {
         Node* delptr = new Node();
         Node* prevptr = NULL;
         if(isEmpty()) {
             cout << "List is already empty U can't delete any item" << endl;
         }else {
             if(isFound(item)) {
-              delptr = head;
-              if(delptr->Data == item) {
-                  head = head->Next;
-                  delete delptr;
-              } else {
-                  while(delptr->Data != item) {
-                      prevptr = delptr;
-                      delptr = delptr->Next;
-                  }
-                  prevptr->Next = delptr->Next;
-                  delete delptr;
-              }
+                delptr = head;
+                if(delptr->Data == item) {
+                    head = head->Next;
+                    delete delptr;
+                }else {
+                    while(delptr->Data != item) {
+                        prevptr = delptr;
+                        delptr = delptr->Next;
+                    }
+                    prevptr->Next = delptr->Next;
+                    delete delptr;
+                }
             }
             else {
                 cout << "Item is not found in the list U can't delete it" << endl;
             }
         }
 
-       }
+    }
        
-       void Reverse() {
+    void Reverse() {
         if(isEmpty()) {
-          cout << "List is already empty U can't reverse it" << endl;
+            cout << "List is already empty U can't reverse it" << endl;
         }else {
             Node*next , *prev , *current;
             current = head;

@@ -3,54 +3,54 @@
 using namespace std;
 
 class Node {
-  public:
-   int Data;
-   Node* Next;
+    public:
+    int Data;
+    Node* Next;
 };
 
 class Linkedlist {
     public:
     Node* head;
 
-    Linkedlist(){
+    Linkedlist() {
         head = NULL;
     }
 
-     bool isEmpty() {
-         return (head == NULL);
-     }
+    bool isEmpty() {
+        return (head == NULL);
+    }
 
-     void insertFirst(int newValue) {
-         Node* newNode = new Node();
-         newNode->Data = newValue;
-         if(isEmpty()) {
-             newNode->Next = NULL;
-             head = newNode;
-            } else {
-                newNode->Next = head;
-                head = newNode;
-            }
-     }
+    void insertFirst(int newValue) {
+        Node* newNode = new Node();
+        newNode->Data = newValue;
+        if(isEmpty()) {
+            newNode->Next = NULL;
+            head = newNode;
+        }else {
+            newNode->Next = head;
+            head = newNode;
+        }
+    }
 
-     void Display() {
-            Node* Temp = head;
-            while(Temp != NULL) {
-                cout << Temp->Data << " ";
-                Temp = Temp->Next;
-            }
-     }
+    void Display() {
+        Node* Temp = head;
+        while(Temp != NULL) {
+            cout << Temp->Data << " ";
+            Temp = Temp->Next;
+        }
+    }
 
-     int Count() {
-         int counter = 0;
-         Node* Temp = head;
-            while(Temp != NULL) {
-                counter++;
-                Temp = Temp->Next;
-            }
-            return counter;
-     } 
+    int Count() {
+        int counter = 0;
+        Node* Temp = head;
+        while(Temp != NULL) {
+            counter++;
+            Temp = Temp->Next;
+        }
+        return counter;
+    } 
 
-     bool isFound(int key){
+    bool isFound(int key){
         bool found = false;
         Node* Temp = head;
         while(Temp != NULL) {
@@ -59,10 +59,11 @@ class Linkedlist {
                 found = true;
                 break;
              }
-             Temp = Temp->Next;
-            }
-            return found;
+            Temp = Temp->Next;
         }
+        return found;
+    }
+    
 };
 int main () {
     Linkedlist list;
